@@ -1,4 +1,6 @@
-﻿namespace Calculadora
+﻿using System;
+
+namespace Calculadora
 {
     partial class Form1
     {
@@ -33,7 +35,7 @@
             this.bt_clear = new System.Windows.Forms.Button();
             this.bt_ce = new System.Windows.Forms.Button();
             this.bt_percent = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bt_back = new System.Windows.Forms.Button();
             this.bt_7 = new System.Windows.Forms.Button();
             this.bt_8 = new System.Windows.Forms.Button();
             this.bt_9 = new System.Windows.Forms.Button();
@@ -48,8 +50,8 @@
             this.bt_1 = new System.Windows.Forms.Button();
             this.bt_2 = new System.Windows.Forms.Button();
             this.bt_3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.bt_virgula = new System.Windows.Forms.Button();
+            this.bt_0 = new System.Windows.Forms.Button();
+            this.bt_ponto = new System.Windows.Forms.Button();
             this.bt_mais_menos = new System.Windows.Forms.Button();
             this.bt_raiz = new System.Windows.Forms.Button();
             this.bt_um_meio = new System.Windows.Forms.Button();
@@ -64,7 +66,6 @@
             this.tb_ecram.Name = "tb_ecram";
             this.tb_ecram.Size = new System.Drawing.Size(275, 38);
             this.tb_ecram.TabIndex = 0;
-            this.tb_ecram.Text = "0";
             // 
             // bt_clear
             // 
@@ -76,6 +77,7 @@
             this.bt_clear.TabIndex = 1;
             this.bt_clear.Text = "C";
             this.bt_clear.UseVisualStyleBackColor = false;
+            this.bt_clear.Click += new System.EventHandler(this.bt_clear_Click);
             // 
             // bt_ce
             // 
@@ -87,6 +89,7 @@
             this.bt_ce.TabIndex = 2;
             this.bt_ce.Text = "CE";
             this.bt_ce.UseVisualStyleBackColor = false;
+            this.bt_ce.Click += new System.EventHandler(this.bt_ce_Click);
             // 
             // bt_percent
             // 
@@ -98,17 +101,19 @@
             this.bt_percent.TabIndex = 3;
             this.bt_percent.Text = "%";
             this.bt_percent.UseVisualStyleBackColor = false;
+            this.bt_percent.Click += new System.EventHandler(this.bt_percent_Click);
             // 
-            // button1
+            // bt_back
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.ForeColor = System.Drawing.Color.Red;
-            this.button1.Location = new System.Drawing.Point(160, 101);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 36);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "BACKSPACE";
-            this.button1.UseVisualStyleBackColor = false;
+            this.bt_back.BackColor = System.Drawing.Color.White;
+            this.bt_back.ForeColor = System.Drawing.Color.Red;
+            this.bt_back.Location = new System.Drawing.Point(160, 101);
+            this.bt_back.Name = "bt_back";
+            this.bt_back.Size = new System.Drawing.Size(127, 36);
+            this.bt_back.TabIndex = 4;
+            this.bt_back.Text = "BACKSPACE";
+            this.bt_back.UseVisualStyleBackColor = false;
+            this.bt_back.Click += new System.EventHandler(this.button1_Click);
             // 
             // bt_7
             // 
@@ -157,6 +162,7 @@
             this.bt_div.TabIndex = 8;
             this.bt_div.Text = "/";
             this.bt_div.UseVisualStyleBackColor = false;
+            this.bt_div.Click += new System.EventHandler(this.bt_div_Click);
             // 
             // bt_mult
             // 
@@ -169,6 +175,7 @@
             this.bt_mult.TabIndex = 9;
             this.bt_mult.Text = "X";
             this.bt_mult.UseVisualStyleBackColor = false;
+            this.bt_mult.Click += new System.EventHandler(this.bt_mult_Click);
             // 
             // bt_sub
             // 
@@ -181,6 +188,7 @@
             this.bt_sub.TabIndex = 10;
             this.bt_sub.Text = "-";
             this.bt_sub.UseVisualStyleBackColor = false;
+            this.bt_sub.Click += new System.EventHandler(this.bt_sub_Click);
             // 
             // bt_sum
             // 
@@ -193,6 +201,7 @@
             this.bt_sum.TabIndex = 11;
             this.bt_sum.Text = "+";
             this.bt_sum.UseVisualStyleBackColor = false;
+            this.bt_sum.Click += new System.EventHandler(this.bt_sum_Click);
             // 
             // bt_equal
             // 
@@ -205,6 +214,7 @@
             this.bt_equal.TabIndex = 12;
             this.bt_equal.Text = "=";
             this.bt_equal.UseVisualStyleBackColor = false;
+            this.bt_equal.Click += new System.EventHandler(this.bt_equal_Click);
             // 
             // bt_4
             // 
@@ -278,30 +288,31 @@
             this.bt_3.UseVisualStyleBackColor = false;
             this.bt_3.Click += new System.EventHandler(this.bt_3_Click);
             // 
-            // button2
+            // bt_0
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(60, 307);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(46, 36);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "0";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.bt_0.BackColor = System.Drawing.Color.White;
+            this.bt_0.ForeColor = System.Drawing.Color.Red;
+            this.bt_0.Location = new System.Drawing.Point(60, 307);
+            this.bt_0.Name = "bt_0";
+            this.bt_0.Size = new System.Drawing.Size(46, 36);
+            this.bt_0.TabIndex = 19;
+            this.bt_0.Text = "0";
+            this.bt_0.UseVisualStyleBackColor = false;
+            this.bt_0.Click += new System.EventHandler(this.button2_Click);
             // 
-            // bt_virgula
+            // bt_ponto
             // 
-            this.bt_virgula.BackColor = System.Drawing.Color.White;
-            this.bt_virgula.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_virgula.ForeColor = System.Drawing.Color.Red;
-            this.bt_virgula.Location = new System.Drawing.Point(108, 307);
-            this.bt_virgula.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
-            this.bt_virgula.Name = "bt_virgula";
-            this.bt_virgula.Size = new System.Drawing.Size(46, 36);
-            this.bt_virgula.TabIndex = 20;
-            this.bt_virgula.Text = ".";
-            this.bt_virgula.UseVisualStyleBackColor = false;
+            this.bt_ponto.BackColor = System.Drawing.Color.White;
+            this.bt_ponto.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_ponto.ForeColor = System.Drawing.Color.Red;
+            this.bt_ponto.Location = new System.Drawing.Point(108, 307);
+            this.bt_ponto.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.bt_ponto.Name = "bt_ponto";
+            this.bt_ponto.Size = new System.Drawing.Size(46, 36);
+            this.bt_ponto.TabIndex = 20;
+            this.bt_ponto.Text = ".";
+            this.bt_ponto.UseVisualStyleBackColor = false;
+            this.bt_ponto.Click += new System.EventHandler(this.bt_virgula_Click);
             // 
             // bt_mais_menos
             // 
@@ -313,6 +324,7 @@
             this.bt_mais_menos.TabIndex = 21;
             this.bt_mais_menos.Text = "+/-";
             this.bt_mais_menos.UseVisualStyleBackColor = false;
+            this.bt_mais_menos.Click += new System.EventHandler(this.bt_mais_menos_Click);
             // 
             // bt_raiz
             // 
@@ -324,6 +336,7 @@
             this.bt_raiz.TabIndex = 22;
             this.bt_raiz.Text = "√\t";
             this.bt_raiz.UseVisualStyleBackColor = false;
+            this.bt_raiz.Click += new System.EventHandler(this.bt_raiz_Click);
             // 
             // bt_um_meio
             // 
@@ -335,6 +348,7 @@
             this.bt_um_meio.TabIndex = 23;
             this.bt_um_meio.Text = "½";
             this.bt_um_meio.UseVisualStyleBackColor = false;
+            this.bt_um_meio.Click += new System.EventHandler(this.bt_um_meio_Click);
             // 
             // bt_quadrado
             // 
@@ -346,6 +360,7 @@
             this.bt_quadrado.TabIndex = 24;
             this.bt_quadrado.Text = "x²";
             this.bt_quadrado.UseVisualStyleBackColor = false;
+            this.bt_quadrado.Click += new System.EventHandler(this.bt_quadrado_Click);
             // 
             // label1
             // 
@@ -371,8 +386,8 @@
             this.Controls.Add(this.bt_um_meio);
             this.Controls.Add(this.bt_raiz);
             this.Controls.Add(this.bt_mais_menos);
-            this.Controls.Add(this.bt_virgula);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.bt_ponto);
+            this.Controls.Add(this.bt_0);
             this.Controls.Add(this.bt_3);
             this.Controls.Add(this.bt_2);
             this.Controls.Add(this.bt_1);
@@ -387,7 +402,7 @@
             this.Controls.Add(this.bt_9);
             this.Controls.Add(this.bt_8);
             this.Controls.Add(this.bt_7);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.bt_back);
             this.Controls.Add(this.bt_percent);
             this.Controls.Add(this.bt_ce);
             this.Controls.Add(this.bt_clear);
@@ -399,13 +414,14 @@
 
         }
 
+
         #endregion
 
         private System.Windows.Forms.TextBox tb_ecram;
         private System.Windows.Forms.Button bt_clear;
         private System.Windows.Forms.Button bt_ce;
         private System.Windows.Forms.Button bt_percent;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button bt_back;
         private System.Windows.Forms.Button bt_7;
         private System.Windows.Forms.Button bt_8;
         private System.Windows.Forms.Button bt_9;
@@ -420,8 +436,8 @@
         private System.Windows.Forms.Button bt_1;
         private System.Windows.Forms.Button bt_2;
         private System.Windows.Forms.Button bt_3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button bt_virgula;
+        private System.Windows.Forms.Button bt_0;
+        private System.Windows.Forms.Button bt_ponto;
         private System.Windows.Forms.Button bt_mais_menos;
         private System.Windows.Forms.Button bt_raiz;
         private System.Windows.Forms.Button bt_um_meio;
